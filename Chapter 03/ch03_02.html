@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Multi Conditions</title>
+  </head>
+
+  <body>
+    <script>
+      let myAge = parseInt(prompt("Enter your age", "30"), 10);
+
+
+      if (myAge >= 0 && myAge <= 10){
+        document.write("Your age is between 0 and 10</br>");
+      }
+
+      if (!(myAge >= 0 && myAge <= 10)){
+        document.write("Your age is  not between 0 and 10</br>");
+      }
+      
+      if (myAge >= 80 || myAge <= 10){
+        document.write("Your age is either greater than 80 or less than 10</br>"); 
+      }
+
+      if ((myAge >= 30 && myAge <= 39) || (myAge >= 80 && myAge <= 89)){
+        document.write("Your age is between 30 and 39 or 80 and 89</br>");
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
