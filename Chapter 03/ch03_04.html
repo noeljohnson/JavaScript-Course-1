@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Exploring For</title>
+  </head>
+
+  <body>
+    <script>
+      let farenhArr = [212, 32, -459.15],
+        celsArr = [],
+        lc;
+
+      for (lc in farenhArr){
+        celsArr[lc] = 5/9 * (farenhArr[lc] - 32);
+      }
+
+      for (lc = 2; lc > -1; lc--){
+        document.write( farenhArr[lc] + "\xB0 farenheit is " + celsArr[lc] + "\xB0 celcius<br/>");
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
