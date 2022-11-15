@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Break and Continue</title>
+  </head>
+
+  <body>
+    <script>
+      let farenh = [212, "string data", -459.67];
+      
+      document.write("<br/><br/>Using Break<br/><br/>");
+
+      for (let i = 0; i < 3; i++){
+        if (isNaN(farenh[i])){
+          alert("Invalid entry found at farenh[" + i + "]" );
+          break;
+        }
+
+        document.write(farenh[i] + "\xB0 farenhite is " + 5 / 9 * (farenh[i] - 32) + "\xB0 celcius<br/>");
+      }
+
+      document.write("<br/><br/>Using Continue<br/><br/>");
+
+      for (let i = 0; i < 3; i++){
+        if (isNaN(farenh[i])){
+          alert("Invalid entry found at farenh[" + i + "]" );
+          continue;
+        }
+
+        document.write(farenh[i] + "\xB0 farenhite is " + 5 / 9 * (farenh[i] - 32) + "\xB0 celcius<br/>");
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

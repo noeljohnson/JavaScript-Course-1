@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html lang="en">
+  
+  <head>
+  </head>
+
+  <body>
+    <script>
+      function convToCels(degFarenh){
+        return (5/9 * (degFarenh - 32));
+      }
+
+      let farenhArr = [212, 32, 459.15],
+        celsArr = [];
+
+      for (let i = 0; i < 3; i++){
+        celsArr[i] = convToCels(farenhArr[i]);
+      }
+
+      for (let i = 2; i >= 0; i--){
+        document.write("For i = " + i + ", farenhite  = " + farenhArr[i] + "\xB0 which is "
+          + celsArr[i] + "\xB0 celcius<br/>");
+      }
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->
