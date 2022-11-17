@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Passing Functions</title>
+  </head>
+
+  <body>
+    <script>
+      function dispMult(multip, start, end){
+        for (let i = start; i <= end; i++){
+          document.write(multip + " * " + i + " = " + multip * i + "</br>");
+        }
+      }
+      
+      function checkIntegerInp(message){
+        let res;
+        do{
+          res = prompt(message, "");
+        }while(isNaN(res));
+
+        return (parseInt(res, 10));
+      }
+
+      function getNTables(){
+        let multip, start, end, runCondition = true;
+        
+        while (runCondition){
+
+          multip = checkIntegerInp("Enter multiplier");
+          start = checkIntegerInp("Enter start");
+          end = checkIntegerInp("Enter end");
+
+          if (multip != -1 && start != -1 && end != -1){
+            dispMult(multip, start, end);
+          }else{
+            runCondition = false;
+          }
+
+          document.write("<br/>");
+        }
+      }
+
+      getNTables();
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->
