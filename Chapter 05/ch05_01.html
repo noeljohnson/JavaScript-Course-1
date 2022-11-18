@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Finding All Occureneces</title>
+  </head>
+
+  <body>
+    <script>
+      let givenString = "Welcome to Wrox Books. The Wrox website is www.wrox.com. Visit the Wrox website today. Thanks for buying Wrox",
+        searchString  = "Wrox",
+        fp = givenString.indexOf(searchString),
+        numOccur = 0;
+
+      while (fp != -1){
+        numOccur++;
+        fp = givenString.indexOf(searchString, fp + searchString.length);
+      }
+
+      document.write("There are " + numOccur + " occurences of the word \"" + searchString + "\" in \"" + givenString + "\"</br>");
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
