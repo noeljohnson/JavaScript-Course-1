@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>String Methods</title>
+  </head>
+
+  <body>
+    <script>
+      document.write("Some string methods<br/>");
+
+      let sampStr = "  hhihi There ";
+      document.write("The sample string used is \"" + sampStr  + "\"<br/>");
+      document.write("In lower-case : " + sampStr.toLowerCase() + "<br/>");
+      document.write("In upper-case : " + sampStr.toUpperCase() + "<br/>");
+      document.write("After trim : \"" + sampStr.trim() + "\"<br/>");
+
+      let res = "";
+
+      for (let i = 'A'.charCodeAt(0); i <= 'Z'.charCodeAt(0); i++){
+        res = res + String.fromCharCode(i);
+      }
+
+      document.write("All cap letters : " + res + "</br>");
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

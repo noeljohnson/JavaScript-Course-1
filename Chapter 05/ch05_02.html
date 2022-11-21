@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Character type</title>
+  </head>
+
+  <body>
+    <script>
+      function getFirstLetterType(word){
+        let chrNum = word.charCodeAt(0),
+          result = 'O';
+
+        if (chrNum >= 'A'.charCodeAt(0) && chrNum <= 'Z'.charCodeAt(0)){
+          result = 'U';
+        }else if (chrNum >= 'a'.charCodeAt(0) && chrNum <= 'z'.charCodeAt(0)){
+          result = 'L';
+        }else if (chrNum >= '0'.charCodeAt(0) && chrNum <= '9'.charCodeAt(0)){
+          result = 'I';
+        }
+
+        return(result);
+      }
+
+      let myStr = prompt("Enter String", "Hello World");
+
+      switch(getFirstLetterType(myStr)){
+        case 'U':
+          document.write("The first character is in upper case<br/>");
+          break;
+
+        case 'L':
+          document.write("The first character is in lower case<br/>");
+          break;
+
+        case 'I':
+          document.write("The first character is an integer<br/>");
+          break;
+
+        default:
+          document.write("The first character is some special character");
+          break;
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

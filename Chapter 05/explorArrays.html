@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Array Methods</title>
+  </head>
+
+  <body>
+    <script>
+      let age = [1, 2, 3],
+        name = ["John", "Seth", "Mark"];
+
+      document.write("Length of name : " + name.length + "<br/>");
+      
+      name.push("George")
+      document.write("After pushing name is : " + name + "<br/>");
+
+      let nameAge = name.concat(age); // concatenating two arrays
+      document.write("New array after concatenating name and age : " + nameAge + "</br>");
+
+      document.write("slice of array from 3, 5 is : " + nameAge.slice(3, 6) + "<br/>");
+
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

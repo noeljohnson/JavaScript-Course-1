@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Get File Name</title>
+  </head>
+
+  <body>
+    <script>
+      let url = window.location.href,
+        fileName = url.substring(url.lastIndexOf('/') + 1, url.length);
+      document.write("The file name is \"" + fileName + "\"");
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC>
