@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Array Iterator Methods</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function isLessThan3(value, index, arr){
+        let res = false;
+
+        if (value < 3){
+          res = true;  
+        }
+
+        return (res);
+      }
+
+      function dispArr(value , index, arr){
+        document.write("&nbsp;&nbsp;arr[" + index + "] = " + value + "<br/>");
+      }
+      
+      function triple(value, index, arr){
+        arr[index] = value * 3;
+      }
+
+      function doubleVal(value, index, arr){
+        return (value * 2);
+      }
+
+      let arr = [1, 2, 3, 4, 5];
+
+      document.write("The array contents are<br/>");
+      arr.forEach(dispArr);
+      
+      document.write("Is every element less than 3 : " + arr.every(isLessThan3) + "<br/>");
+      document.write("Are some elements less than 3 : " + arr.some(isLessThan3) + "<br/>");
+
+      document.write("Elements less than 3 are : " + arr.filter(isLessThan3).join(", ") + "<br/>");
+      
+      arr.forEach(triple);
+      document.write("The array is now tripled, the contents are<br/>");
+      arr.forEach(dispArr);
+
+      document.write("Storing in a new array double of these values<br/>");
+      let res = arr.map(doubleVal);
+      document.write("The new array is " + res.join(", ") + "<br/>");
+
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

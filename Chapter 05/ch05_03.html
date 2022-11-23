@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Exploring Array Methods</title>
+  </head>
+
+  <body>
+    <script>
+      let ord = parseInt(prompt("Enter 1 for sorting in ascending order and -1 for sorting in descending order", "1"), 10),
+        myShopping = ["Eggs", "Milk", "Potatoes", "Cereal", "Banana"];
+
+      myShopping.sort();
+      if (ord == -1){
+        myShopping.reverse();
+      }
+      if (ord == 1 || ord == -1){
+        document.write(myShopping.join("<br/>") + "<br/>");
+      }else{
+        document.write("Invalid entry<br/>");
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
