@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Current Date</title>
+  </head>
+
+  <body>
+    <script>
+      let date = new Date(),
+        year = date.getFullYear(),
+        numMonth = date.getMonth(),
+        numDay = date.getDate(),
+        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        monthSuffix = undefined;
+
+      switch(numDay % 10){
+        case 1:
+          monthSuffix = "st";
+          break
+        case 2:
+          monthSuffix = "nd";
+          break;
+        case 3:
+          monthSuffix = "rd";
+          break;
+        default:
+          monthSuffix = "th";
+          break;
+      }
+      
+      document.write("It is the " + numDay + monthSuffix + " day ");
+      document.write("of " + months[numMonth] + ", " + year + "<br/>")
+
+      document.write()
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->

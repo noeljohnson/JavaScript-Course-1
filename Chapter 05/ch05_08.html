@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Current Time</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function padZero2(num){
+        if (num < 10){
+          return ('0' + num);
+        }else{
+          return ('' + num);
+        }
+      }
+
+      let today = new Date(),
+        hour = today.getHours(),
+        hourStr = padZero2(hour),
+        minStr = padZero2(today.getMinutes()),
+        secStr = padZero2(today.getSeconds()),
+        greeting = undefined;
+
+      if (hour < 12){
+        greeting = "Good Morning";
+      }else if (hour < 17){
+        greeting = "Good Afternoon";
+      }else{
+        greeting = "Good Evening";
+      }
+      
+      document.write("<h4>Welcome to my Website</h4>");
+      document.write(greeting + ", The time is " + hourStr + ":" + minStr  + ":" + secStr + "<br/>");
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->
