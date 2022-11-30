@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>References</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function Person(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
+
+      Person.prototype.getFullName = function(){
+        return (this.firstName + " " + this.lastName);
+      }
+      
+      Person.prototype.greet = function(pers){
+        return ("Hello " + pers.getFullName()+ ". I am " + this.getFullName());
+      }
+
+      let p1 = new Person("John", "Doe"),
+        p2 = new Person("Jane", "Doe");
+
+      document.write(p2.greet(p1) + "<br/>");
+
+    </script>
+  </body>
+
+</html>

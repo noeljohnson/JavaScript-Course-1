@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html>
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Using the split method</title>
+  </head>
+
+  <body>
+    <script>
+
+      function revCSV(csv){
+        return(csv.split(",").reverse().join(","));
+      }
+
+      let values = prompt("Enter a set of comma seperated values", 
+        "Apple,Oranges,Bananas"),
+        res = revCSV(values);
+      alert(res);
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->

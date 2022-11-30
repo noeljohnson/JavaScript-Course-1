@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Getting Names</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function dispNameArr(nameArr){
+        nameArr.forEach(function(value, index, arr){
+          document.write(value + "<br/>");
+        });
+      }
+
+      function inpNames(arr){
+        let name = prompt("Enter name", "John Doe");
+        if (name.trim() == ""){
+          return;
+        }else{
+          arr.push(name);
+          inpNames(arr);
+        }
+      }
+      
+      let nameArr = [];
+      inpNames(nameArr);
+      nameArr.sort();
+      dispNameArr(nameArr);
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
