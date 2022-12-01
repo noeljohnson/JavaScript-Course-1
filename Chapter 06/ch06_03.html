@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--GTG-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Regular Expression Testing</title>
+  </head>
+
+  <body>
+    <script>
+      function isValidParaphrase(para){
+        let regex = /[^a-z\d ]/i;
+        return !(regex.test(para));
+      }
+
+      let inpStr = prompt("Enter paraphrase", "");
+
+      if (isValidParaphrase(inpStr)){
+        alert("Valid Input");
+      }else{
+        alert("Invalid Input");
+      }
+    </script>
+  </body>
+</html>
+<!--TYJC-->
