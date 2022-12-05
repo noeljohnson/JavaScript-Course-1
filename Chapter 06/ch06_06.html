@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Positional Characters</title>
+  </head>
+
+  <body>
+    <script>
+      let myStr = "Languages like JavaScript, VBScript, VBJavaScript and PHP are interpreted";
+      document.write(myStr + "</br>");
+      document.write("JavaScript and VBScript -> XXX<br/>");
+      document.write(myStr.replace(/\b(VB)?(Java)?Script\b/g, "XXX") + "<br/>");
+      document.write("Lets fix that<br/>");
+      document.write(myStr.replace(/\b(VB|Java)?Script\b/g, "XXX"));
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Positional Characters</title>
+  </head>
+
+  <body>
+    <script>
+      let myStr = "Hi there\nHow do you do\nHope you are doing fine";
+      document.write(myStr.replace(/\n/g, "<br/>") + "<br/>");
+      document.write("To replace all ocuurence starting with H to h</br>");
+      document.write(myStr.replace(/^H/gm, 'h').replace(/$/gm, "<br/>")+ "<br/>");
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
