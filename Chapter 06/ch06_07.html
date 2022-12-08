@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Regular Expression Splitting</title>
+  </head>
+
+  <body>
+    <script>
+      myStr = "apple, 0.99, banana, 0.50, peach, 0.25, orange, 0.75";
+      document.write("Following is myStr<br/>");
+      document.write("  " + myStr + "<br/>");
+      document.write("The list of fruits in them is<br/>");
+      document.write(myStr.split(/[^a-z]+/i).join("<br/>"));
+    </script>
+  </body>
+
+</html>

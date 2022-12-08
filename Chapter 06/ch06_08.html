@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Regular Expression Replacing</title>
+  </head>
+
+  <body>
+    <script>
+      let myStr = "He then said \'My Name is O\'Connerly, yes that\'s right, O\'Connerly\'.";
+      document.write("Original : " + myStr + "<br/>");
+      document.write("Final : " + myStr.replace(/\B'|'\B/g, "\"") + "<br/>");
+    </script>
+  </body>
+
+</html>
