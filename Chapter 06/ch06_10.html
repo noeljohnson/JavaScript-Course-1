@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Validating Forms</title>
+  </head>
+
+  <body>
+    <script src="validateInp.js"></script>
+    <script>
+      let email = prompt("Enter email", "example@domain"),
+        postalCode = prompt("Enter Postal Code", "12345-1234"),
+        phoneNumber = prompt("Phone Number", 123456789);
+
+      document.write("Is valid email : " + validateEmail(email) + "<br/>");
+      document.write("Is valid postal code : " + validatePostalCode(postalCode) + "<br/>");
+      document.write("Is valid phone number: " + validatePhoneNum(phoneNumber) + "<br/>");
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
