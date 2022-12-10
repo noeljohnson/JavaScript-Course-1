@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Setting Using UTC</title>
+  </head>
+
+  <body>
+    <script>
+      let locDate = new Date(); 
+      locDate.setUTCHours(13);
+      locDate.setUTCMinutes(0);
+      locDate.setUTCSeconds(0);
+
+      let html = "<p>" + locDate.toUTCString()  + "</p>";
+      html += "<p>" + locDate.toLocaleString() + "</p>";
+      document.write(html);
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

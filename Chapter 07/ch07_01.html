@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Dispalying UTC and Local Time</title>
+  </head>
+
+  <body>
+    <script>
+      let locDate = new Date(), 
+        html = "<p>UTC time is " + locDate.toUTCString() + "</p>";
+
+      html += "<p>Local time is " + locDate.toLocaleString() + "</p>";
+      html += "<p>Time zone offset is " + locDate.getTimezoneOffset() + "</p>";
+      html += "<p>Locale time string " + locDate.toLocaleTimeString() + "</p>";
+      html += "<p>Time string " + locDate.toTimeString() + "</p>";
+      html += "<p>Locale date string " + locDate.toLocaleDateString() + "</p>";
+      html += "<p>Date string " + locDate.toDateString() + "</p>";
+
+      document.write(html);
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

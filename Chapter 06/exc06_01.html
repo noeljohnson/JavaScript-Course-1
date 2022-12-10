@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Correcting Repitatiosn</title>
+  </head>
+
+  <body>
+    <script>
+      let myStr = "This sentence has has has a a a a a a a fault and and we need to fix it.",
+        regEx = /(\b\w+\b)( +\1)+/g,
+        regExFStr = new RegExp("(\\b\\w+\\b)( +\\1)+", 'g');
+      document.write(myStr + "<br/>");
+      document.write("After removing the repitation<br/>");
+      document.write(myStr.replace(regExFStr, "$1") + "<br/>");
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
