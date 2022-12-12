@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Get Date of Birth</title>
+  </head>
+
+  <body>
+    <div id="output">
+    </div>
+    <script>
+      function parseDateInp(dateStr){
+        let re = /^\d{1,2} *[,/-] *\d{1,2} *[,/-] *\d{4}$/;
+        if (re.test(dateStr)){
+          let dateInfo = dateStr.match(/\d+/g);
+          return(dateInfo.map(function(val, ind, array){
+            return (parseInt(val));
+          }));
+        }else{
+          document.write("Invalid format for date<br/>");
+        }
+        return false;
+      }
+
+      let dateStr = prompt("Enter your birthday in dd-mm-yyyy format", "22/05/1967"),
+        dateInfo = parseDateInp(dateStr);
+
+      if(dateInfo !== false){
+        let dt = new Date(dateInfo[2], dateInfo[1] - 1, dateInfo[0]),
+          days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.write("You were born on a " + days[dt.getDay()] + "<br/>");
+      }
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

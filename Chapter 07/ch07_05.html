@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>An updated clock</title>
+  </head>
+
+  <body>
+    <div id="output">
+    </div>
+    <script>
+      function getSecToNextMin(){
+        let dt = new Date();
+        return ((60 - dt.getSeconds()) % 60);
+      }
+
+      function dispTime(){
+        let dt = new Date(),
+          timeStrIntr = dt.getHours() + ':' + dt.getMinutes(),
+          timeStr = timeStrIntr.replace(/\b(\d)\b/g, "0$1");
+        document.getElementById("output").innerText = timeStr;
+      }
+
+      function dispTimeInterval(){
+        dispTime();
+        setInterval(dispTime, 60000);
+      }
+      
+      dispTime();
+      setTimeout(dispTimeInterval, getSecToNextMin() * 1000);
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

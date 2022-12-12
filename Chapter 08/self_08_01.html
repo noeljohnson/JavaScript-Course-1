@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Window Properties</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function goTemp(){
+        location.href = "temp.html";
+      }
+
+      function pageDetails(){
+        document.write("href " + location.href + "<br/>");
+        document.write("protocol " + location.protocol + "<br/>");
+        document.write("port " + location.port + "<br/>");
+        document.write("hostname " + location.hostname + "<br/>");
+        setTimeout(function(){
+          history.go(-2);
+        }, 1000);
+      }
+      
+      let status = location.href.match(/\d$/);
+      console.log('--', status);
+      if (status != null && status[0] == '1'){
+        document.write("Currently in main page<br/>");
+        setTimeout(pageDetails, 5000);
+      }else{
+        document.write("Going to temp page<br/>");
+        setTimeout(goTemp, 5000);
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

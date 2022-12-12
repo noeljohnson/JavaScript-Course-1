@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Stopping a timer</title>
+  </head>
+
+  <body>
+    <script>
+      function doThisLater(){
+        document.write("Its been 5 secs");
+      }
+
+      function stopTimer(tid){
+        clearTimeout(tid);
+        document.write("Function cleared out");
+      }
+
+      let tid = setTimeout(doThisLater, 5000);
+      stopTimer(tid);
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
