@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loading Images</title>
+  </head>
+
+  <body>
+    <img src="" alt="" width="200px" height="150px"/>
+    <script>
+      function addFlagText(val, ind, arr){
+        return(val.replace(/(\w+).(\w+)/, "flag of $1"));
+      }
+      let pics = ["usa.gif", "jamaica.gif", "mexico.gif"],
+        altText = pics.map(addFlagText),
+        opt = parseInt(prompt("Enter a number from 0 to 2"), 10);
+
+      if (opt >= 0 && opt <= 2){
+        document.images[0].src = pics[opt];
+        document.images[0].alt = altText[opt];
+      }else{
+        document.write("Invalid option entered<br/>");
+      }
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

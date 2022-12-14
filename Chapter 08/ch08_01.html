@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Getting Location</title>
+  </head>
+
+  <body>
+    <script>
+      function geoSuccess(position){
+        let posnInfo = position.coords
+        document.write("Latitude : " + posnInfo.latitude + "<br/>");
+        document.write("Longitude : " + posnInfo.longitude + "<br/>");
+        document.write("Speed : " + posnInfo.speed + "<br/>");
+      }
+
+      function geoFail(error){
+        document.write(error.message + "<br/>");
+      }
+
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

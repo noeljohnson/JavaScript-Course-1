@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Setting Background Color</title>
+  </head>
+
+  <body>
+    <script>
+      function setBG(){
+        let colDepth = screen.colorDepth;
+
+        switch(colDepth){
+          case 1:
+          case 4:
+            document.bgColor = "white";
+            break;
+          case 8:
+          case 15:
+          case 16:
+            document.bgColor = "blue";
+            break;
+          case 24:
+          case 32:
+            document.bgColor = "skyblue";
+            break;
+          default:
+            document.bgColor = "white";
+            break;
+        }
+
+        document.write("Color depth of this screen is : " + colDepth + "<br/>");
+      }
+
+      setBG();
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
