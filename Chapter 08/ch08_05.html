@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Browser Sniffing</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function detectBrowser(){
+        let bInfo = navigator.userAgent,
+          bNameArr = bInfo.split('/')[2].match(/(msie|firefox|chrome|safari|opera)/gi),
+          bVersArr = bInfo.split('/')[3].match(/\d+.\d+/);
+
+        if (bNameArr == null){
+          document.write("Couldnt detect browser name<br/>");
+        }else{
+          document.write("Your browser is " + bNameArr[0] + "<br/>");
+          document.write("Version : " + bVersArr[0] + "<br/>");
+        }
+      }
+
+      detectBrowser();
+
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

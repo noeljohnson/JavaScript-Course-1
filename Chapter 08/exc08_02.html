@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Display Image</title>
+  </head>
+
+  <body>
+    <img src="" alt="" width="200px" height="150px"/>
+    <script>
+      let imgs = ["usa.gif", "jamaica.gif", "mexico.gif"],
+        altTexts = imgs.map(function(val, ind, arr){
+          return(val.replace(/(\w+)(.\w+)/, "Flag of $1"));
+        }),
+        index = parseInt(Math.random() * imgs.length, 10);
+      document.images[0].src = imgs[index];
+      document.images[0].alt = altTexts[index];
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

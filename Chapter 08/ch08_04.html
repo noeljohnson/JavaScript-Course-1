@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Getting Location With Feature Detection</title>
+  </head>
+
+  <body>
+    <script>
+      function geoSuccess(position){
+        let posnInfo = position.coords
+        document.write("Latitude : " + posnInfo.latitude + "<br/>");
+        document.write("Longitude : " + posnInfo.longitude + "<br/>");
+        document.write("Speed : " + posnInfo.speed + "<br/>");
+      }
+
+      function geoFail(error){
+        document.write(error.message + "<br/>");
+      }
+
+      if (typeof navigator.geolocation != undefined){
+        navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);
+      }else{
+        document.write("Browser doesnt support geolocation<br/>");
+      }
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
