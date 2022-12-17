@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Using Query Selectors</title>
+  </head>
+
+  <body>
+    <p class="sub-title">
+      This is a <span>special</span> paragraph element that contains <span>some text</span>
+    </p>
+    <script>
+      let spanNode = document.querySelector(".sub-title span"); //gets the first span in sub title class
+      spanNode.style.color = "red";
+      let allSpanNodes = document.querySelectorAll(".sub-title span"); //gets all matching css rule elements
+      allSpanNodes.forEach(
+        function(val, ind, arr){
+          val.style.fontWeight = "bold";
+        }
+      );
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
