@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Using Siblings</title>
+  </head>
+
+  <body>
+    <h1 id="heading1">My Heading 1</h1>
+    <p id="paragraph1">This is some text in a paragraph</p>
+    <div id="results"></div>
+    <script>
+      let htmlElem, headElem, bodyElem,
+        h1Elem, pElem, resElem;
+
+      resElem = document.getElementById("results");
+
+      htmlElem = document.documentElement;
+      resElem.innerText += "htmlElem : " + htmlElem.tagName + '\n';
+      headElem = htmlElem.firstChild;
+      resElem.innerText += "headElem : " + headElem.tagName + '\n';
+
+      if (headElem.nextSibling.nodeType == 1){
+        bodyElem = headElem.nextSibling;
+      }else{
+        bodyElem = headElem.nextSibling.nextSibling;
+      }
+      resElem.innerText += "bodyElem : " + bodyElem.tagName + '\n';
+
+      if (bodyElem.firstChild.nodeType == 1){
+        h1Elem = bodyElem.firstChild;
+      }else{
+        h1Elem = bodyElem.firstChild.nextSibling;
+      }
+      resElem.innerText += "h1Elem : " + h1Elem.tagName + '\n';
+
+      if (h1Elem.nextSibling.nodeType == 1){
+        pElem = h1Elem.nextSibling;
+      }else{
+        pElem = h1Elem.nextSibling.nextSibling;
+      }
+      resElem.innerText += "pElem : " + pElem.tagName + '\n';
+
+      if (pElem.previousSibling.nodeType == 3){
+        h1Elem = pElem.previousSibling.previousSibling;
+      }else{
+        h1Elem = pElem.previousSibling;
+      }
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->

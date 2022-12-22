@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Using Element Objects</title>
+  </head>
+
+  <body>
+    <h1 id="heading1">My Heading 1</h1>
+    <p id="paragraph1">This is some text in a paragraph</p>
+    <script>
+
+      function attrMeth(){
+        alert(p1.getAttribute("align"));
+        p1.removeAttribute("align");
+      }
+
+      let htmlObj = document.documentElement;
+      alert(htmlObj.tagName);
+
+      let p1 = document.getElementById("paragraph1");
+      p1.setAttribute("align", "center");
+      setTimeout(attrMeth, 1000);
+    </script>
+  </body>
+
+</html>
+
+<!--TYJC-->
