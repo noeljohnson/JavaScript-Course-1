@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Adding elements to Document</title>
+  </head>
+
+  <body>
+    <script>
+      let body = document.querySelector("body"),
+        h1 = document.createElement("h1"),
+        p = document.createElement("p"),
+        h1t = document.createTextNode("My Heading"),
+        pt = document.createTextNode("This is some text in paragraph");
+
+      h1.appendChild(h1t);
+      p.appendChild(pt);
+      body.insertBefore(p, document.querySelector("script"));
+      body.insertBefore(h1, p);
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
