@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Changing Styles</title>
+    <style>
+      #divAdvert{
+        position: absolute;
+        font: 12px arial;
+        top: 4px;
+        left: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="divAdvert">
+      Here is an advertisement
+    </div>
+    <script>
+      function advertAnimate(){
+        let currLoc = divAdvert.offsetLeft;
+        if (currLoc == 400){
+          dirRev = true;
+        }else if(currLoc == 0){
+          dirRev = false;
+        }
+
+        if (dirRev){
+          currLoc -= 1;
+        }else{
+          currLoc += 1;
+        }
+
+        divAdvert.style.left = currLoc + "px";
+      }
+
+      let divAdvert = document.getElementById("divAdvert"),
+        dirRev = false;
+      setInterval(advertAnimate, 10);
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

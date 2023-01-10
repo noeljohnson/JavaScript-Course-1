@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Changing Styles</title>
+    <style>
+      #divAdvert{
+        font: 12pt arial;
+      }
+      .new-style{
+        font-style: italic;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="divAdvert">
+      Here is an advertisement
+    </div>
+    <script>
+      let divAdvert = document.getElementById("divAdvert");
+      divAdvert.className = "new-style";
+      divAdvert.style.position = "absolute";
+      divAdvert.style.left = "100px";
+      divAdvert.style.top = "100px";
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->

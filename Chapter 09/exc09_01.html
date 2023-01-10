@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--GTG-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Setting Up A Table Using JavaScript</title>
+  </head>
+  <body>
+    <script>
+      let tbl = document.createElement("table"),
+        headingArr = ["Car", "Top Speed", "Price"],
+        rowArr = [];
+
+      rowArr[0] = ["Chevrelot", "120mph", "$10,000"];
+      rowArr[1] = ["Pontiac", "140mph", "$20,0000"];
+
+      let thr = document.createElement("tr"); 
+
+      for (let i = 0, td; i < headingArr.length; i++){
+        td = document.createElement("td");
+        td.innerText = headingArr[i];
+        thr.appendChild(td);
+      }
+
+      tbl.appendChild(thr);
+
+      for (let i = 0, tr; i < rowArr.length; i++){
+        tr = document.createElement("tr");
+        for (let j = 0, td; j < rowArr[i].length; j++){
+          td = document.createElement("td");
+            td.innerText = rowArr[i][j];
+            tr.appendChild(td);
+        }
+        tbl.appendChild(tr);
+      }
+
+      document.body.appendChild(tbl);
+
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
